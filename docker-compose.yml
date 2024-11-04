@@ -1,5 +1,5 @@
+# discovery/docker-compose.yml
 version: '3.8'
-
 services:
   discovery-server:
     image: astar5327/discovery:latest
@@ -16,4 +16,4 @@ services:
 
 networks:
   msa-network:
-    driver: bridge
+    external: true
