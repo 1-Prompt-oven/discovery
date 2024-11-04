@@ -44,7 +44,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_KEY }}
           script: |
-            sudo docker rm $(sudo docker ps -a)
+            sudo docker rm -f discovery || true
             sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/discovery
             cd ~/discovery
             sudo docker-compose up -d
