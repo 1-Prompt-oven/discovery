@@ -1,18 +1,18 @@
+server:
+  port: 8761
 spring:
   application:
     name: discovery
-  config:
-    import: "optional:configserver:http://localhost:8888"
-  cloud:
-    config:
-      uri: http://localhost:8888
-      fail-fast: false
-
+#  config:
+#    import: "http://localhost:8888/"
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#      fail-fast: false
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-server:
-  port: 8761
+
 test:
   value: not imported
