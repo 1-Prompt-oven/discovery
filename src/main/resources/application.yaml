@@ -3,12 +3,14 @@ server:
 spring:
   application:
     name: discovery
-#  config:
-#    import: "http://localhost:8888/"
-#  cloud:
-#    config:
-#      uri: http://localhost:8888
-#      fail-fast: false
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: main
+      fail-fast: false
+
 eureka:
   client:
     register-with-eureka: false
